@@ -1,33 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take the pain quiz to find the right Auralign product.">
+  <title>Auralign Therapeutics | Pain Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;600;700&family=Nunito+Sans:ital,opsz,wght@0..76,400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#quiz">Quiz</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Welcome to the Quiz!</h1>
-        <section id="quiz">
-            <form>
-                <label for="question1">Question 1: What is the capital of France?</label><br>
-                <input type="text" id="question1" name="question1"><br>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Quiz Company</p>
-    </footer>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Auralign Therapeutics home">
+        <img src="auralign-logo.png" alt="Auralign Therapeutics logo">
+      </a>
+      <nav class="main-nav">
+        <div class="main-nav-links">
+          <a href="index.html#about-us">About Us</a>
+          <a href="products.html">Products</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="quiz.html">Pain Quiz</a>
+          <a href="faq.html">Q&amp;A</a>
+        </div>
+        <a href="contact.html" class="btn btn-sm">Get Product</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section quiz-terra" aria-labelledby="quiz-heading">
+      <div class="container">
+        <div class="section-head centered">
+          <h2 id="quiz-heading">Find Your Best Product</h2>
+          <p class="section-intro">Answer a few quick questions and we will recommend the most suitable device.</p>
+        </div>
+        <form id="painQuiz" class="quiz-card">
+          <div class="quiz-progress" aria-live="polite">
+            <span id="quizProgressText">Question 1 of 1</span>
+            <div class="quiz-progress-track" aria-hidden="true">
+              <div id="quizProgressBar" class="quiz-progress-bar"></div>
+            </div>
+          </div>
+
+          <div id="quizStep" class="quiz-step" aria-live="polite"></div>
+
+          <div class="quiz-actions">
+            <button id="quizBack" type="button" class="btn btn-ghost">Back</button>
+            <button id="quizNext" type="button" class="btn">Next</button>
+            <button id="quizSubmit" type="submit" class="btn">Get Recommendation</button>
+          </div>
+
+          <p id="quizResult" class="quiz-result" aria-live="polite"></p>
+          <p class="quiz-note">
+            This quiz is for general guidance and does not replace medical advice.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p class="footer-branding">
+        <img src="auralign-logo.png" alt="Auralign Therapeutics logo">
+        <span>&copy; 2026 Auralign Therapeutics. Intelligent massage solutions for modern pain relief.</span>
+      </p>
+      <a href="index.html">Home</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
